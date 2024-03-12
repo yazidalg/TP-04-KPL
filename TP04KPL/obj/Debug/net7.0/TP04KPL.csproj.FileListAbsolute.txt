@@ -1,0 +1,15 @@
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/bin/Debug/net7.0/TP04KPL
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/bin/Debug/net7.0/TP04KPL.deps.json
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/bin/Debug/net7.0/TP04KPL.runtimeconfig.json
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/bin/Debug/net7.0/TP04KPL.dll
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/bin/Debug/net7.0/TP04KPL.pdb
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/TP04KPL.csproj.AssemblyReference.cache
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/TP04KPL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/TP04KPL.AssemblyInfoInputs.cache
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/TP04KPL.AssemblyInfo.cs
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/TP04KPL.csproj.CoreCompileInputs.cache
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/TP04KPL.dll
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/refint/TP04KPL.dll
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/TP04KPL.pdb
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/TP04KPL.genruntimeconfig.cache
+/Users/yazidal/Documents/Development/Campus/Konstruksi Perangkat Lunak/TP04KPL/TP04KPL/obj/Debug/net7.0/ref/TP04KPL.dll
