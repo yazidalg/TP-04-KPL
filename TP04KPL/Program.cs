@@ -1,84 +1,99 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 
-using static KodePos;
-public enum trigger { BukaPintu, KunciPintu };
-public enum status { Terkunci, Terbuka };
-
-public class KodePos
+namespace DoorControlSystem
 {
-    public enum EnumKodepos
+    // Enumeration for door triggers
+    public enum Trigger
     {
-        Batununggal,
-        Kujangsari,
-        Mengger,
-        Wates,
-        Cijaura,
-        Jatisari,
-        Sekejati,
-        Kebonwaru,
-        Maleer,
-        Samoja
+        OpenDoor,
+        LockDoor
     }
 
-    public static String getKodePos(EnumKodepos Wilayah)
+    // Enumeration for door status
+    public enum Status
     {
-        String[] outputKode = {
-            "40266",
-            "40287",
-            "40267",
-            "40256",
-            "40287",
-            "40286",
-            "40286",
-            "40286",
-            "40272",
-            "40274",
-            "40273"
+        Locked,
+        Unlocked
+    }
+
+    public class PostalCode
+    {
+        // Enumeration for regions
+        public enum Region
+        {
+            Batununggal,
+            Kujangsari,
+            Mengger,
+            Wates,
+            Cijaura,
+            Jatisari,
+            Sekejati,
+            Kebonwaru,
+            Maleer,
+            Samoja
+        }
+
+        // Array of postal codes corresponding to regions
+        private static readonly string[] RegionPostalCodes = {
+            "40266", "40287", "40267", "40256", "40287", "40286",
+            "40286", "40286", "40272", "40274", "40273"
         };
-        return outputKode[(int)Wilayah];
-    }
-}
 
-public class Pintu
-{
-
-    public status currentStatus;
-    public Pintu()
-    {
-        this.currentStatus = status.Terkunci;
-    }
-
-    public void action(trigger Trigger)
-    {
-        if (Trigger == trigger.BukaPintu)
+        // Method to get the postal code for a specific region
+        public static string GetPostalCode(Region region)
         {
-            this.currentStatus = status.Terbuka;
-        }
-        else if (Trigger == trigger.KunciPintu)
-        {
-            this.currentStatus = status.Terkunci;
+            return RegionPostalCodes[(int)region];
         }
     }
-}
 
-public class Hello
-{
-    public static void Main(String[] args)
+    public class Door
     {
-        EnumKodepos list = EnumKodepos.Sekejati;
-        String kodePos = getKodePos(list);
-        Console.WriteLine(kodePos, list);
+        // Property to hold the current status of the door
+        public Status CurrentStatus { get; private set; }
 
-        Pintu pintu = new Pintu();
-        pintu.action(trigger.KunciPintu);
-
-        if (pintu.currentStatus == status.Terbuka)
+        // Constructor initializes the door as locked
+        public Door()
         {
-            Console.WriteLine("pintu tidak terkunci");
+            CurrentStatus = Status.Locked;
         }
-        else if ((pintu.currentStatus == status.Terkunci))
+
+        // Method to perform an action (open or lock the door)
+        public void PerformAction(Trigger trigger)
         {
-            Console.WriteLine("pintu terkunci");
+            switch (trigger)
+            {
+                case Trigger.OpenDoor:
+                    CurrentStatus = Status.Unlocked;
+                    break;
+                case Trigger.LockDoor:
+                    CurrentStatus = Status.Locked;
+                    break;
+            }
+        }
+    }
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            // Get and print the postal code for a specific region
+            var region = PostalCode.Region.Sekejati;
+            string postalCode = PostalCode.GetPostalCode(region);
+            Console.WriteLine($"Postal code for {region}: {postalCode}");
+
+            // Create a new Door object and lock it
+            var door = new Door();
+            door.PerformAction(Trigger.LockDoor);
+
+            // Check and print the current status of the door
+            if (door.CurrentStatus == Status.Unlocked)
+            {
+                Console.WriteLine("The door is unlocked.");
+            }
+            else if (door.CurrentStatus == Status.Locked)
+            {
+                Console.WriteLine("The door is locked.");
+            }
         }
     }
 }
